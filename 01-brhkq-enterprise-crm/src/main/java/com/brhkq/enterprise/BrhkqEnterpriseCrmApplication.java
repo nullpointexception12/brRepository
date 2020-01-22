@@ -8,6 +8,7 @@ public class BrhkqEnterpriseCrmApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BrhkqEnterpriseCrmApplication.class, args);
+
 	}
 
 }

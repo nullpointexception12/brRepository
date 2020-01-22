@@ -27,12 +27,13 @@
 				<p class="p2">内部人员登录</p>
 			</div>
 			<!-- 输入框 -->
+            <form action="/login.do">
 			<div class="lgD">
-				<img class="img1" src="${pageContext.request.contextPath}/img/logName.png" /><input type="text"
+				<img class="img1" src="${pageContext.request.contextPath}/img/logName.png" /><input type="text" id="username"
 					placeholder="输入用户名" />
 			</div>
 			<div class="lgD">
-				<img class="img1" src="${pageContext.request.contextPath}/img/logPwd.png" /><input type="text"
+				<img class="img1" src="${pageContext.request.contextPath}/img/logPwd.png" /><input type="text" id="password"
 					placeholder="输入用户密码" />
 			</div>
 			<div class="lgD logD2">
@@ -42,8 +43,9 @@
 				</div>
 			</div>
 			<div class="logC">
-				<button>登 录</button>
+                    <button>登 录</button>
 			</div>
+            </form>
 		</div>
 	</div>
 	<!-- 登录body  end -->
