@@ -1,59 +1,75 @@
 package com.brhkq.enterprise.model;
 
-/**
- * ClassName:User
- * Package:com.brhkq.enterprise.model
- * Description:<br/>
- *
- * @date:2020/1/22 0022 22:23
- */
+import java.util.Date;
+
 public class User {
-    private String name;
+    private Integer id;
+
     private String username;
+
     private String password;
 
-    public User() {
+    private Date createTime;
+
+    private Date updateTime;
+
+    private Date failureTime;
+
+    private String disableIp;
+
+    public Integer getId() {
+        return id;
     }
 
-    public User(String name, String username, String password) {
-        this.name = name;
-        this.username = username;
-        this.password = password;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public User setName(String name) {
-        this.name = name;
-        return this;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getUsername() {
         return username;
     }
 
-    public User setUsername(String username) {
+    public void setUsername(String username) {
         this.username = username;
-        return this;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public User setPassword(String password) {
+    public void setPassword(String password) {
         this.password = password;
-        return this;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "name='" + name + '\'' +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                '}';
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    public Date getFailureTime() {
+        return failureTime;
+    }
+
+    public void setFailureTime(Date failureTime) {
+        this.failureTime = failureTime;
+    }
+
+    public String getDisableIp() {
+        return disableIp;
+    }
+
+    public void setDisableIp(String disableIp) {
+        this.disableIp = disableIp;
     }
 }

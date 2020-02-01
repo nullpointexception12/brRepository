@@ -1,7 +1,7 @@
 package com.brhkq.enterprise.service;
 
+import com.brhkq.enterprise.common.CommonResult;
 import com.brhkq.enterprise.model.User;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Service;
 
 /**
@@ -14,5 +14,5 @@ import org.springframework.stereotype.Service;
 @Service
 public interface UserService {
 
-    public User queryUser(String username, String password);
+    public CommonResult queryUser(String username, String password, String ip);
 }

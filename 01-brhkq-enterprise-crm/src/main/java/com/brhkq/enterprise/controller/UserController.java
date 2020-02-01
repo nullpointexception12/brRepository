@@ -1,10 +1,15 @@
 package com.brhkq.enterprise.controller;
 
+import com.brhkq.enterprise.common.CommonResult;
+import com.brhkq.enterprise.common.Constants;
+import com.brhkq.enterprise.model.User;
 import com.brhkq.enterprise.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -21,16 +26,19 @@ public class UserController {
     private UserService userService;
 
     @RequestMapping("/login.do")
-    public String login(String username, String password, String qrCode, HttpSession session){
-
-        Object qrCode1 = session.getAttribute("qrCode");
-        if(!qrCode.equals(qrCode1.toString())){
-            return "您输入的验证码不正确";
+    public @ResponseBody Object login(String username, String password,String verifyCode,HttpServletRequest request){
+        CommonResult commonResult = null;
+        //验证码忽略大小写
+        if(!request.getSession().getAttribute("verifyCode").toString().equalsIgnoreCase(verifyCode)){
+            commonResult = new CommonResult();
+            commonResult.setCode(Constants.code_500);
+            commonResult.setMsg("验证码错误");
+            return commonResult;
         }
 
-        userService.queryUser(username,password);
-
-        return "index.html";
+        String ip = request.getRemoteAddr();
+        commonResult = userService.queryUser(username,password,ip);
+        return commonResult;
     }
 
 }

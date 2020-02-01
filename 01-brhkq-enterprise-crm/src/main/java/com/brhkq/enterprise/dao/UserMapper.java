@@ -1,15 +1,20 @@
 package com.brhkq.enterprise.dao;
 
 import com.brhkq.enterprise.model.User;
+import org.apache.ibatis.annotations.Param;
 
-/**
- * ClassName:UserMapper
- * Package:com.brhkq.enterprise.dao
- * Description:<br/>
- *
- * @date:2020/1/22 0022 22:25
- */
 public interface UserMapper {
+    int deleteByPrimaryKey(Integer id);
 
+    int insert(User record);
 
+    int insertSelective(User record);
+
+    User selectByPrimaryKey(Integer id);
+
+    int updateByPrimaryKeySelective(User record);
+
+    int updateByPrimaryKey(User record);
+
+    User selectByUsernameAndPassword(@Param("username") String username, @Param("password")String password);
 }
