@@ -40,6 +40,7 @@ public class UserServiceImpl implements UserService {
             commonResult.setMsg("您的主机Ip被限制访问");
         }else {
             commonResult.setCode(Constants.code_200);
+            commonResult.data = user;
         }
 
         return commonResult;

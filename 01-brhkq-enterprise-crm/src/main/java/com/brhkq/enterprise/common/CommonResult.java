@@ -9,6 +9,8 @@ public class CommonResult{
 
     public String msg;
 
+    public Object data;
+
     public int getCode() {
         return code;
     }

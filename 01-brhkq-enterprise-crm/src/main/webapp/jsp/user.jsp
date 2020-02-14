@@ -1,10 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>管理员管理-有点</title>
-<link rel="stylesheet" type="text/css" href="css/css.css" />
-<script type="text/javascript" src="js/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/css.css" />
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
 <!-- <script type="text/javascript" src="js/page.js" ></script> -->
 </head>
 
@@ -44,8 +45,8 @@
 							<td>山下就只</td>
 							<td>2015-25-36 12:12</td>
 							<td><a href="connoisseuradd.html"><img class="operation"
-									src="img/update.png"></a> <img class="operation delban"
-								src="img/delete.png"></td>
+									src="${pageContext.request.contextPath}/img/update.png"></a> <img class="operation delban"
+								src="${pageContext.request.contextPath}/img/delete.png"></td>
 						</tr>
 					</table>
 					<div class="paging">此处是分页</div>

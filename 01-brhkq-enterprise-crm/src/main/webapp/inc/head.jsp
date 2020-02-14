@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -17,11 +18,11 @@
 		<div class="headR">
 			<p class="p1">
 				欢迎，
-				<?php echo cookie('name')?>
+				${user.username}
 			</p>
 			<p class="p2">
-				<a href="#" class="resetPWD">重置密码</a>&nbsp;&nbsp;<a
-					href="{:U('Admin/Index/exit')}" class="goOut">退出</a>
+				&nbsp;&nbsp;<a
+					href="" class="goOut">退出</a>
 			</p>
 		</div>
 		<!-- onclick="{if(confirm(&quot;确定退出吗&quot;)){return true;}return false;}" -->

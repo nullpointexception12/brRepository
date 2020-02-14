@@ -38,6 +38,10 @@ public class UserController {
 
         String ip = request.getRemoteAddr();
         commonResult = userService.queryUser(username,password,ip);
+        if(commonResult.getCode() == 200){
+            request.getSession().setAttribute("user",commonResult.data);
+            request.getSession().setMaxInactiveInterval(3600);
+        }
         return commonResult;
     }
 
