@@ -64,6 +64,14 @@
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
 
+		<!-- spring-boot-devtools依赖包 热部署插件-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+			<scope>true</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -71,6 +79,15 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+
+			<!-- spring boot devtool plugin -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<fork>true</fork>
+				</configuration>
 			</plugin>
 
 			<!--mybatis代码自动生成插件-->
