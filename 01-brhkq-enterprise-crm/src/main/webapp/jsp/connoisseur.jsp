@@ -1,10 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>行家-有点</title>
-<link rel="stylesheet" type="text/css" href="css/css.css" />
-<script type="text/javascript" src="js/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/css.css" />
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
 <!-- <script type="text/javascript" src="js/page.js" ></script> -->
 </head>
 
@@ -33,7 +34,7 @@
 						<div class="cfD">
 							<input class="addUser" type="text" placeholder="输入用户名/ID/手机号/城市" />
 							<button class="button">搜索</button>
-							<a class="addA addA1" href="connoisseuradd.html">添加行家+</a>
+							<a class="addA addA1" href="connoisseuradd.jsp">添加行家+</a>
 						</div>
 					</form>
 				</div>
@@ -68,8 +69,8 @@
 							<td>周一周二周三</td>
 							<td>未审核</td>
 							<td>否</td>
-							<td><a href="connoisseuradd.html"><img class="operation"
-									src="img/update.png"></a> <img class="operation delban"
+							<td><a href="connoisseuradd.jsp"><img class="operation"
+																  src="img/update.png"></a> <img class="operation delban"
 								src="img/delete.png"></td>
 						</tr>
 						<tr>
@@ -86,8 +87,8 @@
 							<td>周一周二周三</td>
 							<td>未审核</td>
 							<td>否</td>
-							<td><a href="connoisseuradd.html"><img class="operation"
-									src="img/update.png"></a> <img class="operation delban"
+							<td><a href="connoisseuradd.jsp"><img class="operation"
+																  src="img/update.png"></a> <img class="operation delban"
 								src="img/delete.png"></td>
 						</tr>
 					</table>

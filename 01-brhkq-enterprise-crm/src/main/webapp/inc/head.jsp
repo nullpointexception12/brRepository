@@ -22,13 +22,13 @@
 			</p>
 			<p class="p2">
 				&nbsp;&nbsp;<a
-					href="" class="goOut">退出</a>
+					href="javasrcipt:void(0)" class="goOut" onclick="logout()">退出</a>
 			</p>
 		</div>
 		<!-- onclick="{if(confirm(&quot;确定退出吗&quot;)){return true;}return false;}" -->
 	</div>
 
-	<div class="closeOut">
+	<div class="closeOut" id="closeOk">
 		<div class="coDiv">
 			<p class="p1">
 				<span>X</span>
@@ -39,6 +39,12 @@
 			</p>
 		</div>
 	</div>
+
+	<script>
+		function logout() {
+			$("#closeOk").show();
+		}
+	</script>
 
 
 

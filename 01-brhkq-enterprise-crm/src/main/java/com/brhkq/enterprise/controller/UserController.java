@@ -45,4 +45,11 @@ public class UserController {
         return commonResult;
     }
 
+    @RequestMapping("/logout.do")
+    public String logout(HttpSession session){
+        session.invalidate(); //清空session
+        return "redirect:/jsp/login.jsp";
+    }
+
+
 }

@@ -13,7 +13,7 @@
 	<div id="pageAll">
 		<div class="pageTop">
 			<div class="page">
-				<img src="img/coin02.png" /><span><a href="#">首页</a>&nbsp;-&nbsp;-</span>&nbsp;管理员管理
+				<img src="${pageContext.request.contextPath}/img/coin02.png" /><span><a href="#">首页</a>&nbsp;-&nbsp;-</span>&nbsp;管理员管理
 			</div>
 		</div>
 
@@ -23,8 +23,9 @@
 				<div class="conform">
 					<form>
 						<div class="cfD">
-							<input class="userinput" type="text" placeholder="输入用户名" />&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
-							<input class="userinput vpr" type="text" placeholder="输入用户密码" />
+							用户名：<input class="userinput" type="text" placeholder="输入用户名" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							会员等级：<input class="userinput vpr" type="text" placeholder="输入会员等级" />
+							<button class="userbtn">查询</button>
 							<button class="userbtn">添加</button>
 						</div>
 					</form>
@@ -44,8 +45,8 @@
 							<td>运营专员</td>
 							<td>山下就只</td>
 							<td>2015-25-36 12:12</td>
-							<td><a href="connoisseuradd.html"><img class="operation"
-									src="${pageContext.request.contextPath}/img/update.png"></a> <img class="operation delban"
+							<td><a href="connoisseuradd.jsp"><img class="operation"
+																  src="${pageContext.request.contextPath}/img/update.png"></a> <img class="operation delban"
 								src="${pageContext.request.contextPath}/img/delete.png"></td>
 						</tr>
 					</table>
